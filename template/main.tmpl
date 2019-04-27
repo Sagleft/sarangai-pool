@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	{% include 'parts/head.tmpl' %}
+	<body class="nav-md">
+		<div class="container body">
+			<div class="main_container">
+				<div class="col-md-3 left_col">
+					<div class="left_col scroll-view">
+						<div class="navbar nav_title" style="border: 0;">
+							<a href="/" class="site_title"><i class="fa fa-paw"></i> <span>Pool</span></a>
+						</div>
+						<div class="clearfix"></div>
+						{% include 'parts/menu.tmpl' %}
+					</div>
+				</div>
+				{% include 'parts/navi_top.tmpl' %}
+				{# page content #}
+				<div class="right_col" role="main">
+					{% include 'parts/navi_stats.tmpl' %}
+					{% include 'main/network_stats.tmpl' %}
+					{% include 'main/other_stats.tmpl' %}
+					{% include 'main/text_stats.tmpl' %}
+				</div>
+				{# /page content #}
+				{% include 'parts/footer.tmpl' %}
+			</div>
+		</div>
+		{% include 'parts/scripts.tmpl' %}
+	</body>
+</html>
